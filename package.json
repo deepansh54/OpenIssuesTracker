@@ -16,6 +16,7 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "http-server ./app",
+    "start": "http-server ./app -c-300"
+
   }
 }
