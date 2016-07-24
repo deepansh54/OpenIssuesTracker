@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="issueTrackerApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="Deepansh Singh">
+    <title>Open Issues Tracker</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Neuton:200,400" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/octicons/build/font/octicons.min.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <script src="app.module.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/issue/issue.module.js"></script>
+    <script src="core/issue/issue.service.js"></script>
+    <script src="issue-stats/issue-stats.module.js"></script>
+    <script src="issue-stats/issue-stats.component.js"></script>
+  </head>
+  <body>
+    <div class="text-center">
+      <div class="title"><span class="mega-octicon octicon-issue-opened"></span> Open Issues Tracker </div>   
+    </div>
+      
+    <issue-stats></issue-stats>
+
+    <footer> 
+        <div> <a href="https://github.com/deepansh54/OpenIssuesTracker">View on GitHub <span class="octicon octicon-mark-github"></span></a></div>
+        <div>Created with <span style="color:red;">❤</span> by <a href="http://in.linkedin.com/in/deepanshsingh">Deepansh Singh</a></div>
+    </footer>
+  </body>
+</html>

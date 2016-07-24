@@ -1,0 +1,54 @@
+<div class="container issue-stats">
+  <div class="row">
+  	<div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <form class="form" name="form">
+				<div class="form-group">
+					<label for="repoUrl">Enter the URL of any Public Git Repository</label>
+					<div class="input-group">
+						<span class="input-group-addon octicon octicon-repo" id="repo-img"></span>
+						<input class="form-control" type="text" name="repoUrl" ng-model="$ctrl.repoUrl" required="required" pattern="https://github\.com/[A-Za-z0-9-]+/[A-Za-z0-9._-]+" placeholder="For example, https://github.com/Shippable/support" aria-describedby="repo-img">
+
+						<span class="input-group-addon btn btn-primary" ng-click="$ctrl.trackOpenIssues($ctrl.repoUrl)" ng-disabled="form.$invalid">Track!</span>
+					</div>				  
+				  <div class="error-div" ng-show="form.repoUrl.$error.pattern">
+						<small>
+							Repository URL is in wrong format. Please enter the correct URL. For example, https://github.com/Shippable/support
+						</small>
+				  </div>				  
+				  <div class="success-div text-center" ng-show="$ctrl.dataFetchSuccess">
+						<small>
+							Success!
+						</small>
+				  </div>
+				</div>
+      </form>
+    </div>
+    <div class="col-sm-3"></div>
+  </div>
+	<div class="row">
+		<div class="col-sm-12 issue-data-wrapper">
+			<div class="octocat-pic">
+				<img src="img/octobiwan.jpg">
+			</div>
+			<div class="data">
+	      <div class="data-item">
+	      	<div class="circle-1 git-green-bg"><span><b>{{$ctrl.totalIssues}}</b></span></div>
+	      	<div> Open Issues</div>
+	      </div>
+	      <div class="data-item">
+	      	<div class="circle-1 green-bg"><span><b>{{$ctrl.issuesInLast24Hours}}</b></span></div>
+	      	<div> Issues opened in the last 24 Hours</div>
+	      </div>
+	      <div class="data-item">
+	      	<div class="circle-1 yellow-bg"><span><b>{{$ctrl.issuesBetween24HoursAnd7Days}}</b></span></div> 
+	      	<div> Issues opened more than 24 hours ago but less than 7 days ago</div>
+	      </div>
+	      <div class="data-item">
+	      	<div class="circle-1 red-bg"><span><b>{{$ctrl.issuesOlderThan7Days}}</b></span></div>
+	      	<div> Issues opened more than 7 days ago</div>
+	      </div>
+			</div>
+		</div>
+	</div>
+</div>
