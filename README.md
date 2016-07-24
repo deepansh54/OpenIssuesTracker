@@ -4,15 +4,16 @@ A web app for Open Issue tracking for public git repositories.
 Check it out on - https://openissuestracker.herokuapp.com/
 
 ## Technologies
-1.Frontend - AngularJS
-2.Backend - NodeJS
+1.Frontend - AngularJS  
+2.Backend - NodeJS  
 
 ## How it works
-The app uses the Github API to fetch the issue statistics of a public git repository. It counts the issues based on following criteria :  
-1. Total no. of Open issues
-2. Total no. of Open issues opened in the last 24 Hours
-3. Total no. of Open issues opened more than 24 hours ago but less than 7 days ago
-4. Total no. of Open issues opened more than 7 days ago
+The app uses the Github API to fetch the issue statistics of a public git repository. It provides a paginated list of open issues ordered by issue creation time by default. It counts the issues based on following criteria :  
+
+1. Total no. of Open issues.
+2. Total no. of Open issues opened in the last 24 Hours.
+3. Total no. of Open issues opened more than 24 hours ago but less than 7 days ago.
+4. Total no. of Open issues opened more than 7 days ago.
 
 The Github API URL used is  
 
