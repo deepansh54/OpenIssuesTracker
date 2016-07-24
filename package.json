@@ -4,6 +4,10 @@
   "description": "Open Issue tracking for public git repositories",
   "repository": "https://github.com/deepansh54/openissuestracker",
   "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "http-server": "^0.9.0"
+  },
   "devDependencies": {
     "bower": "^1.7.9",
     "http-server": "^0.9.0"
